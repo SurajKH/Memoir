@@ -3,6 +3,7 @@ import Footer from '../common/Footer';
 
 const Home = () => {
   return (
+    <>
     <div className="container mx-auto mt-8 mb-12 w-3/4 border border-x-black p-12 bg-black text-white">
       {/* Benefits of Reading and Writing Blogs Section */}
       <div className="flex justify-between items-center mb-8">
@@ -29,8 +30,9 @@ const Home = () => {
         <p className="text-lg mb-6">Start writing your own blog and inspire others!</p>
         <button className="bg-blue-500 text-white px-4 py-2 rounded">Write a Blog</button>
       </div> */}
-      <Footer/>
     </div>
+    <Footer/>
+</>
     );
 }
 
