@@ -5,6 +5,7 @@ import Footer from '../common/Footer';
 
 const SignIn = () => {
   return (
+    <>
     <div className="flex flex-col lg:flex-row shadow-2xl border border-cyan-900 p-12 ">
      <div className="lg:w-1/2 p-4">
         <SignInForm />
@@ -12,8 +13,9 @@ const SignIn = () => {
       <div className="lg:w-1/2 p-4">
         <SignInCard />
       </div>  
-      <Footer/>   
     </div>
+    <Footer/>   
+   </>
   );
 };
 
