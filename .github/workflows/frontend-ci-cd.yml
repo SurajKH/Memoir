@@ -21,7 +21,6 @@ jobs:
       - name: Change Directory, Pull Changes, and Install Dependencies
         run: |
           cd ./memoir-frontend/memoirapp 
-          # git pull origin main  
           npm install
 
       - name: Build and Test
@@ -33,6 +32,7 @@ jobs:
         if: always()
         run: |
            mkdir -p $GITHUB_WORKSPACE/logs
+           ls /home/runner/.npm/_logs/
            cp /home/runner/.npm/_logs/*.log $GITHUB_WORKSPACE/logs/
            echo "Logs saved in $GITHUB_WORKSPACE/logs/"
 
