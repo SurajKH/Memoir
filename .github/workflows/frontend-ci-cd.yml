@@ -30,23 +30,23 @@ jobs:
         env:
          CI: false
 
-      - name: Save npm debug logs
-        if: always()
-        run: |
-           mkdir -p $GITHUB_WORKSPACE/logs
-           ls /home/runner/.npm/_logs/
-           cp /home/runner/.npm/_logs/*.log $GITHUB_WORKSPACE/logs/
-           echo "Logs saved in $GITHUB_WORKSPACE/logs/"
+      # - name: Save npm debug logs
+      #   if: always()
+      #   run: |
+      #      mkdir -p $GITHUB_WORKSPACE/logs
+      #      ls /home/runner/.npm/_logs/
+      #      cp /home/runner/.npm/_logs/*.log $GITHUB_WORKSPACE/logs/
+      #      echo "Logs saved in $GITHUB_WORKSPACE/logs/"
 
-      - name: View build logs
-        run: cat /home/runner/.npm/_logs/2024-02-11T14_45_52_997Z-debug.log
-        if: failure()
+      # - name: View build logs
+      #   run: cat /home/runner/.npm/_logs/2024-02-11T14_45_52_997Z-debug.log
+      #   if: failure()
 
-      - name: Upload logs artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: npm-logs
-          path: $GITHUB_WORKSPACE/logs
+      # - name: Upload logs artifact
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #     name: npm-logs
+      #     path: $GITHUB_WORKSPACE/logs
 
   docker:
     runs-on: ubuntu-latest
@@ -63,7 +63,7 @@ jobs:
       - name: Docker Build and Push to DockerHub
         uses: docker/build-push-action@v3
         with:
-          context: .
+          context: ./memoir-frontend/memoirapp
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/${{secrets.DOCKER_REPOSITORY}}:memoir-frontend-reactjs-app-latest
 
