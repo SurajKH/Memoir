@@ -27,6 +27,8 @@ jobs:
         run: |
           cd ./memoir-frontend/memoirapp  
           npm run build
+        env:
+         CI: false
 
       - name: Save npm debug logs
         if: always()
