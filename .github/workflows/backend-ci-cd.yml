@@ -57,7 +57,7 @@ jobs:
       - name: Docker Build and Push to DockerHub
         uses: docker/build-push-action@v3
         with:
-          context: .
+          context: ./memoir-backend
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/${{secrets.DOCKER_REPOSITORY}}:memoir-backend-nodejs-app-latest
 
