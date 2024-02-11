@@ -30,17 +30,17 @@ jobs:
           npm run build
 
       - name: Save npm debug logs
-        if: failure()
-        run: |
-          mkdir -p $GITHUB_WORKSPACE/logs
-          cp /home/runner/.npm/_logs/*.log $GITHUB_WORKSPACE/logs/
-          
-      - name: Upload log artifacts
         if: always()
+        run: |
+           mkdir -p $GITHUB_WORKSPACE/logs
+           cp /home/runner/.npm/_logs/*.log $GITHUB_WORKSPACE/logs/
+           echo "Logs saved in $GITHUB_WORKSPACE/logs/"
+
+      - name: Upload logs artifact
         uses: actions/upload-artifact@v2
         with:
-         name: logs
-         path: $GITHUB_WORKSPACE/logs    
+          name: npm-logs
+          path: $GITHUB_WORKSPACE/logs
 
   docker:
     runs-on: ubuntu-latest
