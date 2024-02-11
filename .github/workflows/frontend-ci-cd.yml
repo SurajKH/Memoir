@@ -29,6 +29,11 @@ jobs:
           cd ./memoir-frontend/memoirapp  
           npm run build
 
+      - name: Save npm debug logs
+        run: |
+          mkdir -p $GITHUB_WORKSPACE/logs
+          cp /home/runner/.npm/_logs/*.log $GITHUB_WORKSPACE/logs/
+
   docker:
     runs-on: ubuntu-latest
 
@@ -47,3 +52,9 @@ jobs:
           context: .
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/${{secrets.DOCKER_REPOSITORY}}:memoir-frontend-reactjs-app-latest
+
+      - name: Upload log artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: logs
+          path: $GITHUB_WORKSPACE/logs
