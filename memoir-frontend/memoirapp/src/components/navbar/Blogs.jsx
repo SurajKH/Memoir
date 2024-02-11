@@ -1,16 +1,18 @@
 import React from 'react'
-import EditorNew from './NewEditor';
+import NewEditor from './NewEditor';
 import Footer from '../common/Footer';
 import BlogList from '../contents/BlogContents';
-import CustomCodeEditor from '../contents/CustomCodeEditor';
+import ResponsiveCard from '../contents/ResponsiveCard';
+// import CustomCodeEditor from '../contents/CustomCodeEditor';
 
 const Blogs = () => {
   return (
     <div>
-       <div className='bg-teal-100'>
-       <EditorNew/>
-       <BlogList/>
-       <CustomCodeEditor/>
+       <div>
+       <NewEditor/>
+       {/* <BlogList/> */}
+       {/* <CustomCodeEditor/> */}
+       <ResponsiveCard/>
        <Footer/>
        </div>
     </div>

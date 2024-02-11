@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import CodeEditor from './CodeEditor';
-import ResponsiveCard from './ResponsiveCard';
+import Footer from '../common/Footer';
 
 const CustomCodeEditor = () => {
     const [code, setCode] = useState('');
     const [language, setLanguage] = useState('javascript');
     const [outputs, setOutputs] = useState({
-      javascript: '',
-      python: '',
-      java: '',
-      cpp: '',
+      javascript: 'Code is not Executed Yet.',
+      python: 'Code is not Executed Yet.',
+      java: 'Code is not Executed Yet.',
+      cpp: 'Code is not Executed Yet.',
     });
   
     const handleLanguageChange = (newLanguage) => {
@@ -51,7 +51,13 @@ const CustomCodeEditor = () => {
     };
   
     return (
-      <div className="App min-h-screen flex flex-col items-center justify-center bg-gray-100">
+      <>
+      <div className='w-3/4 mx-auto mt-4 mb-5'>
+        <p className='border bg-gray-200 border-black border-r-8 text-black p-12 text-2xl'>
+          Note: Support for Languages apart from C++ coming Soon.
+        </p>
+      </div>
+      <div className="flex flex-col items-center justify-center bg-gray-100 w-3/4 mx-auto">
         <h1 className="text-3xl font-bold mb-4">Code Editor</h1>
         <div className="mb-4">
           <label className="mr-2">
@@ -80,9 +86,9 @@ const CustomCodeEditor = () => {
             {outputs[language]}
           </pre>
         </div>
-        <ResponsiveCard/>
       </div>
-
+      <Footer/>
+</>
     );
   };
   

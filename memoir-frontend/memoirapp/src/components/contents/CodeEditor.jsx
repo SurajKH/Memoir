@@ -9,15 +9,16 @@ const CodeEditor = ({language,code,onChange}) => {
 
   return (
     <React.Fragment>
-    <div className='w-1/2 mx-auto'>
+    <div >
     <MonacoEditor
        language={language}
        theme="vs-dark" // You can choose a different theme
       value={code}
       options={options}
       onChange={onChange}
-      width={"650px"}
-      height={"500px"}
+      width={"450px"}
+      height={"550px"}
+      className="w-3/4 mx-auto"
       />
     </div>
     </React.Fragment>

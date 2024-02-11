@@ -93,9 +93,9 @@ const TextEditor = () => {
             
           />
         </div>
-        <div className='border border-orange-950 p-4 rounded mt-12'>
-          <h2 className='text-3xl mb-4 text-center lg:text-left '>Text Preview (Basic Styling)</h2>
-          <div className='whitespace-pre-line break-words' dangerouslySetInnerHTML={{ __html: previewContent }} />
+        <div className='border border-orange-950 p-4 rounded mt-12 bg-black'>
+          <h2 className='text-3xl mb-4 text-center lg:text-left text-white'>Text Preview (Basic Styling)</h2>
+          <div className='whitespace-pre-line break-words text-white' dangerouslySetInnerHTML={{ __html: previewContent }} />
         </div>
       </div>
       <ToastContainer position="top-right" autoClose={3000} hideProgressBar={false} closeOnClick pauseOnHover draggable />

@@ -2,7 +2,7 @@
   "name": "memoirapp",
   "version": "0.1.0",
   "private": true,
-  "proxy":"http://localhost:3001",
+  "proxy": "http://localhost:3001",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -20,6 +20,7 @@
     "react-toastify": "^10.0.4",
     "slate": "^0.102.0",
     "slate-react": "^0.102.0",
+    "uuid": "^9.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
