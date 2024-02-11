@@ -1,6 +1,6 @@
 import React from 'react'
 import Footer from '../common/Footer';
-
+import Services from './Services';
 const Home = () => {
   return (
     <>
@@ -24,13 +24,14 @@ const Home = () => {
           <img src="https://www.ryrob.com/wp-content/uploads/2021/11/iStock-496848472.jpg" width={"500px"} height={"500px"} alt="Blog" className="rounded-lg shadow-lg" />
         </div>
       </div>
-
+     
       {/* <div className="text-center">
         <h2 className="text-3xl font-bold mb-4">Ready to Share Your Ideas?</h2>
         <p className="text-lg mb-6">Start writing your own blog and inspire others!</p>
         <button className="bg-blue-500 text-white px-4 py-2 rounded">Write a Blog</button>
       </div> */}
     </div>
+    <Services/>
     <Footer/>
 </>
     );

@@ -3,7 +3,7 @@ import BlogCard from './BlogCard'; //Import your BlogCard component
 import { collection, getDocs } from 'firebase/firestore';
 import { getFirestore } from 'firebase/firestore';
 import DOMPurify from 'dompurify';
-
+import ResponsiveCard from '../contents/ResponsiveCard';
 
 const SanitizedHTML = ({ htmlContent }) => {
     const sanitizedContent = DOMPurify.sanitize(htmlContent);
@@ -38,18 +38,23 @@ const BlogList = () => {
   }, []);
 
   return (
+    <>
     <div className="container mx-auto my-8 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-8">
       {blogs.map((blog) => (
-        <>
+        <div className='bg-gray-800 text-white'>
         {/* <div>
             {blog['content']}
         </div> */}
         {/* <BlogCard key={blog.id} blog={blog} /> */}
         <SanitizedHTML htmlContent={blog['content']} />
-        </>
+        </div>
        
       ))}
     </div>
+    <div>
+    <ResponsiveCard/>
+    </div>
+    </>
   );
 };
 

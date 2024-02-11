@@ -8,7 +8,8 @@ import Home from './components/home/Home';
 import Dashboard from './components/home/Dashboard';
 import Blogs from './components/navbar/Blogs';
 import Contact from './components/contact/Contact';
-
+import Gaming from './components/contents/Gaming';
+import CustomCodeEditor from './components/contents/CustomCodeEditor';
 const App = () => {
 
   return (
@@ -21,6 +22,8 @@ const App = () => {
           <Route path="/dashboard" element={<Dashboard/>} />
           <Route path="/blogs" element={<Blogs/>} />
           <Route path="/contact" element={<Contact/>} />
+          <Route path='/code-arena' element={<CustomCodeEditor/>} />
+          <Route path='/gaming-section' element={<Gaming/>} />
         </Routes>
       </Router>
       {/* <SignIn/> */}

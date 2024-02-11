@@ -64,9 +64,9 @@ const Navbar = () => {
               {/* <Link to="/services" className="hidden lg:inline-block mr-4  text-2xl">
                 Services
               </Link> */}
-              <Link to="/contact" className="hidden lg:inline-block mr-4 text-2xl">
+              {/* <Link to="/contact" className="hidden lg:inline-block mr-4 text-2xl">
                 Contact Us
-              </Link>
+              </Link> */}
               {/* <Link to="/games" className="hidden lg:inline-block mr-4  text-2xl">
                 Games
               </Link> */}
