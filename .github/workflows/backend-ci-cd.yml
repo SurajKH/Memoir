@@ -1,4 +1,4 @@
-name: CI/CD Pipeline for Memoir Application - Backend
+name: CI/CD Pipeline for Memoir Application - Backend (NodeJS)
 
 on:
   push:
