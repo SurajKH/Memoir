@@ -59,7 +59,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/${{secrets.DOCKER_REPOSITORY}}:memoir-frontend-reactjs-app-latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/${{secrets.DOCKER_REPOSITORY}}:memoir-backend-nodejs-app-latest
 
       # - name: Upload log artifacts
       #   if: always()
