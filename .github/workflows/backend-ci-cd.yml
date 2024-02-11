@@ -23,24 +23,24 @@ jobs:
           cd ./memoir-backend  
           npm install
 
-      - name: Build and Test
-        run: |
-          cd ./memoir-backend  
-          npm run build
+      # - name: Build and Test
+      #   run: |
+      #     cd ./memoir-backend  
+      #     npm run build
 
-      - name: Save npm debug logs
-        if: always()
-        run: |
-           mkdir -p $GITHUB_WORKSPACE/logs
-           ls /home/runner/.npm/_logs/
-           cp /home/runner/.npm/_logs/*.log $GITHUB_WORKSPACE/logs/
-           echo "Logs saved in $GITHUB_WORKSPACE/logs/"
+      # - name: Save npm debug logs
+      #   if: always()
+      #   run: |
+      #      mkdir -p $GITHUB_WORKSPACE/logs
+      #      ls /home/runner/.npm/_logs/
+      #      cp /home/runner/.npm/_logs/*.log $GITHUB_WORKSPACE/logs/
+      #      echo "Logs saved in $GITHUB_WORKSPACE/logs/"
 
-      - name: Upload logs artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: npm-logs
-          path: $GITHUB_WORKSPACE/logs
+      # - name: Upload logs artifact
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #     name: npm-logs
+      #     path: $GITHUB_WORKSPACE/logs
 
   docker:
     runs-on: ubuntu-latest
@@ -61,9 +61,9 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/${{secrets.DOCKER_REPOSITORY}}:memoir-frontend-reactjs-app-latest
 
-      - name: Upload log artifacts
-        if: always()
-        uses: actions/upload-artifact@v2
-        with:
-          name: logs
-          path: $GITHUB_WORKSPACE/logs
+      # - name: Upload log artifacts
+      #   if: always()
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #     name: logs
+      #     path: $GITHUB_WORKSPACE/logs
