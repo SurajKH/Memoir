@@ -5,10 +5,15 @@ Memoir: your go-to platform for insightful and engaging blogs.
 Key Features:
 
 firebase is used to handle the authentication and considered two ways of signin (use email address and password/ Google Signin).
+
 database used for the application is NoSQL database, provided by firebase [cloud firestore].
+
 code editor support for people who like to code using react-monaco-code-editor and backend is handled by NodeJS.
+
 contacting us, via phone number where in twillio is being used to send the message to the users and handles the messaging functionality for the application.
+
 creation of ci/cd setup for the application[both frontend and backend] using github actions.
+
 styling using tailwindcss and it is compactible for all screens [laptop/tab and mobile screens].
 
 SignIn Page:
